@@ -1,7 +1,11 @@
-const Image = () => {
+interface ImageProps{
+  source: string;
+}
+
+const Image = ({source}: ImageProps) => {
     return (
       <div>
-        <img src="/logo192.png" alt="Placeholder"/>
+        <img src={source} alt="Picsum"/>
       </div>
     );
   };
