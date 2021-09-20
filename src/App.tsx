@@ -1,9 +1,9 @@
-import Image from './components/Image';
+import Form from './components/Form/Form';
 
 function App() {
   return (
     <div>
-      <Image/>
+      <Form/>
     </div>
   );
 }
