@@ -6,7 +6,7 @@ import { Image } from "./types";
  * @returns Pokémon
  */
  export const fetchRandomImage = async (width: number, height: number, blur: number, grayscale: boolean) =>
- fetch(`https://picsum.photos/${width}/${height}?${grayscale && "grayscale&"}${blur && "blur="+blur}`).then<Image>(
+ fetch(`https://picsum.photos/${width}/${height}${grayscale ? "?grayscale&" : "/?"}${blur && "blur="+blur}`).then<Image>(
    (res) => {
      const expectedResponseCode = 200;
      if (res.status === expectedResponseCode) {
